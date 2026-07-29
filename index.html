@@ -3,125 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bahauddin Zakariya International | OEP & Travels</title>
-    <!-- Premium Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS for Pro Styling -->
+    <title>Bahauddin Zakariya International | Overseas Employment Promoters</title>
+    <!-- Fonts & Frameworks -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Custom CSS Link -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .bg-primary { background-color: #0033a0; }
+        .text-primary { color: #0033a0; }
+        .bg-accent { background-color: #c5a975; }
+        .border-accent { border-color: #c5a975; }
+        .hero-pattern {
+            background-color: #0f172a;
+            background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md fixed w-full z-50">
+    <!-- Top Info Bar -->
+    <div class="bg-slate-900 text-gray-300 text-xs py-2 px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
+        <div>Govt. Approved OEP | License No: 3165/MTN (Valid till 31/12/2026)</div>
+        <div class="mt-1 sm:mt-0">NTN: 3626442 | 24/7 Support: 0092 300 9634530</div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <div class="flex items-center">
-                    <span class="text-2xl font-bold text-blue-800 tracking-tight">BZ International</span>
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="WhatsApp Image 2025-07-10 at 16.47.08_983c4d1e.jpg" alt="BZI Logo" class="h-14 w-14 object-contain">
+                    <div class="flex flex-col">
+                        <span class="text-xl md:text-2xl font-extrabold text-blue-900 leading-none">Bahauddin Zakariya</span>
+                        <span class="text-xs md:text-sm text-red-600 font-bold tracking-widest">INTERNATIONAL</span>
+                    </div>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#" class="text-gray-600 hover:text-blue-600 font-semibold transition">Home</a>
-                    <a href="#flights" class="text-gray-600 hover:text-blue-600 font-semibold transition">Book Flights</a>
-                    <a href="#oep" class="text-gray-600 hover:text-blue-600 font-semibold transition">OEP Services</a>
-                    <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Contact Us</a>
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center space-x-6 text-sm font-semibold">
+                    <a href="#" class="text-blue-600 transition">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About Us</a>
+                    <a href="#services" class="text-gray-600 hover:text-blue-600 transition">Our Services</a>
+                    <a href="#license" class="text-gray-600 hover:text-blue-600 transition">License</a>
+                    <a href="#contact" class="bg-red-600 text-white px-5 py-2 rounded shadow hover:bg-red-700 transition">Get Started</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section with Flight Search -->
-    <section class="hero-bg h-screen flex items-center pt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 relative">
-            <div class="text-center mb-10">
-                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Explore the World & Build Your Career</h1>
-                <p class="text-lg text-gray-200">Premium Air Ticketing & Trusted Overseas Employment Promoter</p>
-            </div>
-
-            <!-- Flight Search Booking Widget -->
-            <div id="flights" class="search-widget p-6 md:p-8 rounded-2xl max-w-4xl mx-auto">
-                <div class="flex space-x-4 border-b pb-4 mb-4">
-                    <button class="text-blue-700 font-bold border-b-2 border-blue-700 pb-1">Flights</button>
-                    <button class="text-gray-500 font-semibold hover:text-blue-700 pb-1">Visa Processing</button>
-                </div>
-                <form id="flight-search-form" class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                    <div class="col-span-1">
-                        <label class="block text-xs font-semibold text-gray-500 uppercase">From</label>
-                        <input type="text" id="input-origin" placeholder="Multan (MUX)" class="premium-input mt-1 w-full py-2 text-lg font-semibold">
-                    </div>
-                    <div class="col-span-1">
-                        <label class="block text-xs font-semibold text-gray-500 uppercase">To</label>
-                        <input type="text" id="input-destination" placeholder="Dubai (DXB)" class="premium-input mt-1 w-full py-2 text-lg font-semibold">
-                    </div>
-                    <div class="col-span-1">
-                        <label class="block text-xs font-semibold text-gray-500 uppercase">Departure</label>
-                        <input type="date" id="input-date" class="premium-input mt-1 w-full py-2 text-lg font-semibold">
-                    </div>
-                    <div class="col-span-1 flex items-end">
-                        <button type="button" id="search-flights-btn" class="btn-premium w-full font-bold py-3 rounded-lg shadow-lg">Search Flights</button>
-                    </div>
-                </form>
-                <div id="flight-results" class="mt-6"></div>
+    <!-- Hero Section -->
+    <section class="hero-pattern py-20 lg:py-32 border-b-4 border-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">Reliable Overseas Manpower<br>Recruitment From Pakistan</h1>
+            <p class="text-lg md:text-xl text-gray-300 font-light max-w-3xl mx-auto mb-10">BZI helps international employers hire skilled, semi-skilled, and unskilled Pakistani workforce with a clear, fast, and professionally managed recruitment process.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-accent text-slate-900 font-bold px-8 py-3 rounded hover:bg-yellow-600 transition shadow-lg">Talk with Experts</a>
+                <a href="#services" class="bg-transparent border-2 border-gray-400 text-white font-bold px-8 py-3 rounded hover:border-white transition">Explore Services</a>
             </div>
         </div>
     </section>
 
-    <!-- OEP Services Section -->
-    <section id="oep" class="py-20 bg-white">
+    <!-- Quick Trust Stats -->
+    <section class="bg-white py-10 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+                <div class="text-4xl font-black text-primary">13+</div>
+                <div class="text-sm font-semibold text-gray-500 uppercase mt-1">Years Experience</div>
+            </div>
+            <div>
+                <div class="text-4xl font-black text-primary">99%</div>
+                <div class="text-sm font-semibold text-gray-500 uppercase mt-1">Client Satisfaction</div>
+            </div>
+            <div>
+                <div class="text-4xl font-black text-primary">GCC</div>
+                <div class="text-sm font-semibold text-gray-500 uppercase mt-1">Primary Market</div>
+            </div>
+            <div>
+                <div class="text-4xl font-black text-primary">100%</div>
+                <div class="text-sm font-semibold text-gray-500 uppercase mt-1">Legally Compliant</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About CEO & Company -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- CEO Image & Intro -->
+                <div class="relative">
+                    <img src="WhatsApp Image 2025-07-10 at 16.31.44_654eba09.jpg" alt="CEO Muhammad Javed" class="rounded-xl shadow-2xl border-4 border-white mx-auto lg:mx-0 w-full max-w-md object-cover z-10 relative">
+                    <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-xl hidden md:block">
+                        <p class="font-bold text-lg">Muhammad Javed</p>
+                        <p class="text-sm text-gray-200">Chief Executive Officer</p>
+                    </div>
+                </div>
+                
+                <!-- Content -->
+                <div>
+                    <h4 class="text-red-600 font-bold tracking-widest uppercase text-sm mb-2">Our Mission & Vision</h4>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Building Success Together in the Gulf</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">As the CEO of Bahauddin Zakariya International (License No. HRD/3165/MTN/2012), I have spent over a decade helping businesses across Saudi Arabia and the Gulf find reliable manpower from Pakistan.</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">I lead with integrity, focus, and a deep understanding of recruitment laws, visa processing, and cross-border workforce planning. Whether you're an employer looking for trusted manpower from Pakistan or a professional in this industry, I welcome the opportunity to connect and collaborate.</p>
+                    
+                    <div class="grid grid-cols-2 gap-6 pt-6 border-t border-gray-200">
+                        <div>
+                            <h5 class="font-bold text-gray-900">Core Values</h5>
+                            <ul class="text-sm text-gray-600 mt-2 space-y-1">
+                                <li>✓ Integrity & Reliability</li>
+                                <li>✓ Professionalism</li>
+                                <li>✓ Fast Deployment</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-gray-900">Our Focus</h5>
+                            <ul class="text-sm text-gray-600 mt-2 space-y-1">
+                                <li>✓ Drivers & Labor</li>
+                                <li>✓ Factory Workers</li>
+                                <li>✓ Skilled Technicians</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h4 class="text-red-600 font-bold tracking-widest uppercase text-sm mb-2">What We Do</h4>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-16">Complete Manpower Support</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 hover:shadow-xl transition hover:border-primary">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-primary">Skilled Workforce</h3>
+                    <p class="text-gray-600 text-sm">Providing qualified technicians, mechanics, electricians, operators, and licensed heavy-duty drivers to meet technical project demands in the GCC.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 hover:shadow-xl transition hover:border-primary">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-primary">Unskilled & Bulk Labor</h3>
+                    <p class="text-gray-600 text-sm">Efficient sourcing of helpers, cleaners, warehouse workers, and general construction labor for large-scale projects requiring rapid mobilization.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 hover:shadow-xl transition hover:border-primary">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-primary">Visa & Deployment</h3>
+                    <p class="text-gray-600 text-sm">Handling strict documentation, Gamca medicals, embassy stamping, protectorate clearance, and air ticketing to ensure stress-free deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Process -->
+    <section class="py-20 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-900">Overseas Employment Solutions</h2>
-                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Licensed by the Government of Pakistan. We specialize in connecting skilled, semi-skilled, and unskilled workforce to top companies in Saudi Arabia and the Gulf.</p>
-                <span class="inline-block mt-4 bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-1 rounded-full">Licence No: 3165/MTN (Valid till 2026)</span>
+                <h2 class="text-3xl md:text-4xl font-bold">How We Work</h2>
+                <p class="text-slate-400 mt-4">A streamlined, 4-step recruitment protocol.</p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-8 rounded-xl oep-card">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Manpower Export</h3>
-                    <p class="text-gray-600">Supplying drivers, labor, factory workers, and technicians to top-tier companies across KSA and UAE.</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="w-16 h-16 rounded-full bg-slate-800 border-2 border-accent mx-auto flex items-center justify-center text-2xl font-bold mb-4">1</div>
+                    <h4 class="font-bold text-lg mb-2">Demand Analysis</h4>
+                    <p class="text-sm text-slate-400">Review job roles, quantity, trade type, and timeline directly with employers.</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl oep-card">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Visa Processing</h3>
-                    <p class="text-gray-600">End-to-end management of documentation, protector stamping, and embassy requirements for rapid deployment.</p>
+                <div>
+                    <div class="w-16 h-16 rounded-full bg-slate-800 border-2 border-accent mx-auto flex items-center justify-center text-2xl font-bold mb-4">2</div>
+                    <h4 class="font-bold text-lg mb-2">Sourcing & Screening</h4>
+                    <p class="text-sm text-slate-400">Filtering candidate profiles for experience, job relevance, and work attitude.</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl oep-card">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Corporate Partnerships</h3>
-                    <p class="text-gray-600">Providing reliable workforce planning and recruitment strategies tailored to Gulf employers' needs.</p>
+                <div>
+                    <div class="w-16 h-16 rounded-full bg-slate-800 border-2 border-accent mx-auto flex items-center justify-center text-2xl font-bold mb-4">3</div>
+                    <h4 class="font-bold text-lg mb-2">Interviews</h4>
+                    <p class="text-sm text-slate-400">Coordinating online or physical interviews for final employer approval.</p>
+                </div>
+                <div>
+                    <div class="w-16 h-16 rounded-full bg-slate-800 border-2 border-accent mx-auto flex items-center justify-center text-2xl font-bold mb-4">4</div>
+                    <h4 class="font-bold text-lg mb-2">Visa & Deployment</h4>
+                    <p class="text-sm text-slate-400">Processing all legal documentation, medicals, and flights until mobilization.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact" class="bg-slate-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-                <h4 class="text-2xl font-bold mb-4">M/S Bahauddin Zakariya International</h4>
-                <p class="text-slate-400">Connecting talent with global opportunities and providing seamless travel experiences.</p>
-            </div>
-            <div>
-                <h4 class="text-xl font-bold mb-4">Contact Info</h4>
-                <ul class="text-slate-400 space-y-2">
-                    <li>CEO: Muhammad Javed</li>
-                    <li>Phone: 00923009634530</li>
-                    <li>Email: bzioep@gmail.com</li>
+    <!-- License Verification Section -->
+    <section id="license" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Government Approved & Verified</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">We operate strictly under the guidelines of the Ministry of Overseas Pakistanis & Human Resource Development. Our operations are fully transparent and audited.</p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center text-gray-800 font-semibold">
+                        <span class="bg-green-100 text-green-700 p-1 rounded mr-3">✓</span> License Holder: Muhammad Asif Makki
+                    </li>
+                    <li class="flex items-center text-gray-800 font-semibold">
+                        <span class="bg-green-100 text-green-700 p-1 rounded mr-3">✓</span> OEP License No: 3165/MTN (Valid till 2026)
+                    </li>
+                    <li class="flex items-center text-gray-800 font-semibold">
+                        <span class="bg-green-100 text-green-700 p-1 rounded mr-3">✓</span> Registered FBR NTN: 3626442
+                    </li>
                 </ul>
             </div>
+            <div class="md:w-1/2">
+                <!-- Integrating the official license image provided by user -->
+                <img src="BZI OEP LICENCE.jpeg" alt="Official BZI OEP License Document" class="w-full rounded-lg shadow-xl border border-gray-300">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-slate-950 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div>
-                <h4 class="text-xl font-bold mb-4">Head Office</h4>
-                <p class="text-slate-400">
+                <img src="WhatsApp Image 2025-07-10 at 16.47.08_983c4d1e.jpg" alt="Logo" class="h-12 w-12 mb-4 bg-white p-1 rounded">
+                <p class="text-sm">Connecting international employers with suitable Pakistani manpower for long-term operational needs.</p>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="#services" class="hover:text-white transition">Services</a></li>
+                    <li><a href="#license" class="hover:text-white transition">Verify License</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Direct Contacts</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><strong>M. Javed:</strong> +92 300 9634530</li>
+                    <li><strong>Asif Makki:</strong> +92 300 6300269</li>
+                    <li><strong>Emails:</strong> bzioep@gmail.com <br> bz786@hotmail.com</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Head Office</h4>
+                <p class="text-sm leading-relaxed">
                     Shop # 35, Near Rahim Chowk,<br>
-                    Gulshan Market Road, Multan Cantt.<br>
-                    Shah Rukn E Alam Town, Pakistan
+                    Gulshan Market Road,<br>
+                    Multan Cantt. Shah Rukn E Alam Town,<br>
+                    Pakistan
                 </p>
             </div>
         </div>
-        <div class="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500">
-            &copy; 2026 Bahauddin Zakariya International. All rights reserved.
+        <div class="border-t border-slate-800 mt-12 pt-8 text-center text-xs">
+            &copy; 2026 M/S Bahauddin Zakariya International. All Rights Reserved.
         </div>
     </footer>
 
-    <!-- Custom JS Script -->
-    <script src="script.js"></script>
 </body>
 </html>
