@@ -1,8 +1,7 @@
-/* style.css - Premium Design System */
-
+/* style.css - BZI Recruitment Site Design System */
 :root {
-    --primary-blue: #0033a0;      
-    --accent-gold: #c5a975;       
+    --primary-blue: #0033a0;
+    --accent-gold: #c5a975;
     --text-dark: #1a1a1a;
     --bg-light: #f8fafc;
     --transition-speed: 0.3s;
@@ -15,49 +14,30 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Hero Section Enhancements */
-.hero-bg {
-    position: relative;
-    background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2000&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
+.hero-pattern {
+    background-color: #0f172a;
+    background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
 }
 
-.hero-bg::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 51, 160, 0.75) 0%, rgba(15, 23, 42, 0.9) 100%);
-    z-index: 1;
-}
+.bg-primary { background-color: var(--primary-blue); }
+.text-primary { color: var(--primary-blue); }
+.bg-accent { background-color: var(--accent-gold); }
+.border-accent { border-color: var(--accent-gold); }
 
-/* Flight Search Widget Styling */
-.search-widget {
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    border-top: 4px solid var(--accent-gold);
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-}
-
-.search-widget:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-/* Premium Inputs */
+/* Premium Inputs (application form) */
 .premium-input {
     border: none;
     border-bottom: 2px solid #e2e8f0;
     background: transparent;
     transition: border-color var(--transition-speed) ease;
 }
-
 .premium-input:focus {
     border-color: var(--primary-blue);
     outline: none;
 }
 
-/* Airline Style Buttons */
+/* Buttons */
 .btn-premium {
     background-color: var(--primary-blue);
     color: white;
@@ -65,22 +45,110 @@ body {
     letter-spacing: 1px;
     transition: background-color var(--transition-speed) ease, transform 0.2s;
 }
-
 .btn-premium:hover {
     background-color: #002277;
     transform: scale(1.02);
 }
 
-/* OEP Cards Hover Effect */
+/* Team / OEP Cards Hover Effect */
 .oep-card {
     border-left: 3px solid transparent;
     border: 1px solid #f1f5f9;
     transition: all var(--transition-speed) ease;
 }
-
 .oep-card:hover {
     border-left: 3px solid var(--accent-gold);
     background-color: white;
     transform: translateX(5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
+
+/* Job Vacancy Cards */
+.job-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-top: 4px solid var(--primary-blue);
+    border-radius: 0.75rem;
+    padding: 1.75rem;
+    transition: all var(--transition-speed) ease;
+}
+.job-card:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+}
+.job-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+/* FAQ Accordion */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+.faq-item.active .faq-answer {
+    max-height: 300px;
+}
+.faq-question {
+    cursor: pointer;
+}
+.faq-icon {
+    transition: transform var(--transition-speed) ease;
+    font-size: 1.25rem;
+    color: var(--primary-blue);
+}
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+/* Social Icons */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    background-color: #1e293b;
+    color: #cbd5e1;
+    transition: all var(--transition-speed) ease;
+}
+.social-icon:hover {
+    background-color: var(--accent-gold);
+    color: #0f172a;
+}
+
+/* WhatsApp Floating Button */
+#whatsapp-float {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #25d366;
+    color: white;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    z-index: 90;
+    transition: transform var(--transition-speed) ease;
+}
+#whatsapp-float:hover {
+    transform: scale(1.08);
+}
+
+/* License Lightbox */
+#license-lightbox.hidden { display: none; }
+
+/* Mobile Menu */
+#mobile-menu.hidden { display: none; }
