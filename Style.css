@@ -1,0 +1,86 @@
+/* style.css - Premium Design System */
+
+:root {
+    --primary-blue: #0033a0;      
+    --accent-gold: #c5a975;       
+    --text-dark: #1a1a1a;
+    --bg-light: #f8fafc;
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    scroll-behavior: smooth;
+}
+
+/* Hero Section Enhancements */
+.hero-bg {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 51, 160, 0.75) 0%, rgba(15, 23, 42, 0.9) 100%);
+    z-index: 1;
+}
+
+/* Flight Search Widget Styling */
+.search-widget {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-top: 4px solid var(--accent-gold);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.search-widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Premium Inputs */
+.premium-input {
+    border: none;
+    border-bottom: 2px solid #e2e8f0;
+    background: transparent;
+    transition: border-color var(--transition-speed) ease;
+}
+
+.premium-input:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+}
+
+/* Airline Style Buttons */
+.btn-premium {
+    background-color: var(--primary-blue);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color var(--transition-speed) ease, transform 0.2s;
+}
+
+.btn-premium:hover {
+    background-color: #002277;
+    transform: scale(1.02);
+}
+
+/* OEP Cards Hover Effect */
+.oep-card {
+    border-left: 3px solid transparent;
+    border: 1px solid #f1f5f9;
+    transition: all var(--transition-speed) ease;
+}
+
+.oep-card:hover {
+    border-left: 3px solid var(--accent-gold);
+    background-color: white;
+    transform: translateX(5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
