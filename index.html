@@ -90,10 +90,12 @@
     <section id="about" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <!-- CEO Image & Intro -->
-                <div class="relative">
-                    <img src="WhatsApp Image 2025-07-10 at 16.31.44_654eba09.jpg" alt="CEO Muhammad Javed" class="rounded-xl shadow-2xl border-4 border-white mx-auto lg:mx-0 w-full max-w-md object-cover z-10 relative">
-                    <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-xl hidden md:block">
+                <!-- CEO Image & Intro (Fixed Stacking Issue) -->
+                <div class="relative inline-block mx-auto lg:mx-0">
+                    <img src="WhatsApp Image 2025-07-10 at 16.31.44_654eba09.jpg" alt="CEO Muhammad Javed" class="rounded-xl shadow-2xl border-4 border-white w-full max-w-sm md:max-w-md object-cover relative z-10">
+                    
+                    <!-- Z-index fixed to z-20 so it floats OVER the image. Added white border for a premium cut-out look -->
+                    <div class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-primary text-white p-5 rounded-xl shadow-2xl hidden md:block z-20 border-4 border-white">
                         <p class="font-bold text-lg">Muhammad Javed</p>
                         <p class="text-sm text-gray-200">Chief Executive Officer</p>
                     </div>
