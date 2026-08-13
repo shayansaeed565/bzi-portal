@@ -1,319 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BZI Travel | Bahauddin Zakariya International</title>
-  <meta name="description" content="Premium travel & recruitment agency – flights, Umrah, visas, manpower. OEP License #3165/MTN." />
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BZI Travel | Bahauddin Zakariya International</title>
+    <meta name="description" content="Premium travel & recruitment agency – flights, Umrah, visas, manpower. OEP License #3165/MTN." />
+
+    <!-- Preconnect for Google Fonts (Faster Loading) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- ===== TOP BAR ===== -->
-<div class="top-bar">
-  <div class="container">
-    <div>
-      <span><i class="fas fa-phone-alt" style="color:var(--gold);margin-right:6px;"></i> +92 300 9634530</span>
-      <span style="margin-left:20px;"><i class="fas fa-envelope" style="color:var(--gold);margin-right:6px;"></i> bz786@hotmail.com</span>
-      <span style="margin-left:20px;"><i class="fas fa-badge-check" style="color:var(--gold);margin-right:6px;"></i> OEP #3165/MTN</span>
-    </div>
-    <div class="socials">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://wa.me/923009634530" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    </div>
-  </div>
-</div>
-
-<!-- ===== NAVBAR ===== -->
-<nav class="navbar" id="navbar">
-  <div class="container">
-    <a href="#" class="logo">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a1a3a'/%3E%3Ctext x='50' y='68' font-family='Playfair Display' font-size='44' font-weight='900' fill='%23c9a84c' text-anchor='middle'%3EBZI%3C/text%3E%3C/svg%3E" alt="BZI Logo" />
-      <div class="logo-text">
-        Bahauddin Zakariya
-        <span>International · Travel &amp; Recruitment</span>
-      </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#flights">Flights</a></li>
-      <li><a href="#umrah">Umrah</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#apply" class="btn btn-primary" style="padding:10px 28px;font-size:0.8rem;">Apply Now</a></li>
-    </ul>
-    <div class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
-</nav>
-
-<!-- ===== MOBILE MENU ===== -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#home">Home</a>
-  <a href="#services">Services</a>
-  <a href="#flights">Flights</a>
-  <a href="#umrah">Umrah</a>
-  <a href="#contact">Contact</a>
-  <a href="#apply" class="btn btn-primary">Apply Now</a>
-</div>
-
-<!-- ===== HERO ===== -->
-<section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <h1>
-        Your Journey Begins
-        <span class="highlight">With BZI Travel</span>
-      </h1>
-      <p>Premium travel &amp; recruitment services — flights, Umrah packages, visa assistance, and overseas employment. Govt. approved since 2012.</p>
-      <div class="hero-badges">
-        <span class="badge"><i class="fas fa-check-circle"></i> 13+ Years Trusted</span>
-        <span class="badge"><i class="fas fa-users"></i> 5,000+ Deployed</span>
-        <span class="badge"><i class="fas fa-shield-alt"></i> Govt. Licensed</span>
-      </div>
-      <div class="hero-actions">
-        <a href="#flights" class="btn btn-primary"><i class="fas fa-plane"></i> Book a Flight</a>
-        <a href="#contact" class="btn btn-outline"><i class="fas fa-headset"></i> Talk to Expert</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-card">
-        <p class="card-title"><i class="fas fa-search" style="margin-right:6px;"></i> Quick Flight Search</p>
-        <h3>Find Your Perfect Trip</h3>
-        <form class="search-form" id="flightSearchForm">
-          <div class="form-row">
-            <input type="text" placeholder="From (e.g. Multan)" id="fromCity" />
-            <input type="text" placeholder="To (e.g. Jeddah)" id="toCity" />
-          </div>
-          <div class="form-row">
-            <input type="date" id="departDate" />
-            <input type="date" id="returnDate" />
-          </div>
-          <select id="flightClass">
-            <option value="economy">Economy Class</option>
-            <option value="business">Business Class</option>
-            <option value="first">First Class</option>
-          </select>
-          <button type="submit" class="btn btn-primary"><i class="fas fa-plane-departure"></i> Search Flights</button>
-        </form>
-        <p style="color:rgba(255,255,255,0.3);font-size:0.7rem;margin-top:14px;text-align:center;">
-          <i class="fas fa-lock" style="margin-right:4px;"></i> Secure &bull; Best Prices &bull; 24/7 Support
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== SERVICES ===== -->
-<section class="services" id="services">
-  <div class="container">
-    <div class="section-title">
-      <p class="sub">What We Offer</p>
-      <h2>Premium Travel &amp; Recruitment Services</h2>
-      <p>From booking flights to deploying manpower, we handle everything with professionalism and care.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="icon"><i class="fas fa-plane"></i></div>
-        <h4>Flight Booking</h4>
-        <p>Domestic &amp; international flights at the best rates with major airlines including Emirates, FlyDubai, and Saudia.</p>
-      </div>
-      <div class="service-card">
-        <div class="icon"><i class="fas fa-mosque"></i></div>
-        <h4>Umrah &amp; Hajj</h4>
-        <p>Complete Umrah and Hajj packages with visa, accommodation, transport, and guided spiritual support.</p>
-      </div>
-      <div class="service-card">
-        <div class="icon"><i class="fas fa-passport"></i></div>
-        <h4>Visa Services</h4>
-        <p>Tourist, business, and work visas for GCC countries, UK, Europe, and more — fast and reliable processing.</p>
-      </div>
-      <div class="service-card">
-        <div class="icon"><i class="fas fa-briefcase"></i></div>
-        <h4>Manpower Recruitment</h4>
-        <p>Government-approved OEP (License #3165/MTN) supplying skilled and unskilled workers to the Gulf region.</p>
-      </div>
-      <div class="service-card">
-        <div class="icon"><i class="fas fa-hotel"></i></div>
-        <h4>Hotel Bookings</h4>
-        <p>Luxury to budget hotels worldwide with exclusive corporate rates and 24/7 concierge support.</p>
-      </div>
-      <div class="service-card">
-        <div class="icon"><i class="fas fa-headset"></i></div>
-        <h4>24/7 Travel Support</h4>
-        <p>Dedicated support team available around the clock for any travel emergencies or last-minute changes.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== DESTINATIONS ===== -->
-<section class="destinations" id="destinations">
-  <div class="container">
-    <div class="section-title">
-      <p class="sub">Where We Fly</p>
-      <h2>Popular Destinations</h2>
-      <p>Connecting Pakistan to the world with seamless travel and recruitment services.</p>
-    </div>
-    <div class="destinations-grid">
-      <div class="dest-card"><div class="flag">🇸🇦</div><h5>Saudi Arabia</h5><p>Riyadh · Jeddah · Dammam</p></div>
-      <div class="dest-card"><div class="flag">🇦🇪</div><h5>UAE</h5><p>Dubai · Abu Dhabi · Sharjah</p></div>
-      <div class="dest-card"><div class="flag">🇶🇦</div><h5>Qatar</h5><p>Doha · Al Wakrah</p></div>
-      <div class="dest-card"><div class="flag">🇴🇲</div><h5>Oman</h5><p>Muscat · Salalah</p></div>
-      <div class="dest-card"><div class="flag">🇧🇭</div><h5>Bahrain</h5><p>Manama · Riffa</p></div>
-      <div class="dest-card"><div class="flag">🇰🇼</div><h5>Kuwait</h5><p>Kuwait City · Hawalli</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FLIGHTS ===== -->
-<section class="flights" id="flights">
-  <div class="container">
-    <div class="section-title">
-      <p class="sub">Special Offers</p>
-      <h2>Featured Flight Deals</h2>
-      <p>Exclusive rates on popular routes. Book now and save with BZI Travel.</p>
-    </div>
-    <div class="flights-grid" id="flightsGrid">
-      <!-- injected by script.js -->
-    </div>
-  </div>
-</section>
-
-<!-- ===== UMRAH ===== -->
-<section class="umrah" id="umrah">
-  <div class="container">
-    <div class="section-title">
-      <p class="sub">Spiritual Journey</p>
-      <h2>Umrah &amp; Hajj Packages</h2>
-      <p>Complete, affordable, and spiritually enriching packages designed with your comfort in mind.</p>
-    </div>
-    <div class="umrah-grid">
-      <div class="umrah-card">
-        <div class="icon"><i class="fas fa-star-and-crescent"></i></div>
-        <h4>Economy Umrah</h4>
-        <p>7-day package with 3-star hotel, visa, and transport.</p>
-        <a href="#contact" class="btn btn-primary">From $850</a>
-      </div>
-      <div class="umrah-card">
-        <div class="icon"><i class="fas fa-moon"></i></div>
-        <h4>Premium Umrah</h4>
-        <p>10-day luxury package with 5-star hotels near Haram.</p>
-        <a href="#contact" class="btn btn-primary">From $1,650</a>
-      </div>
-      <div class="umrah-card">
-        <div class="icon"><i class="fas fa-kaaba"></i></div>
-        <h4>Hajj Package</h4>
-        <p>Complete Hajj services with experienced guides.</p>
-        <a href="#contact" class="btn btn-primary">Inquire Now</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== TESTIMONIALS ===== -->
-<section class="testimonials" id="testimonials">
-  <div class="container">
-    <div class="section-title">
-      <p class="sub">Client Stories</p>
-      <h2>What Our Clients Say</h2>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <blockquote>"BZI made my Umrah experience truly blessed. Everything was perfectly arranged."</blockquote>
-        <div class="author"><div class="avatar">MA</div><div><div class="name">Mohammad Ali</div><div class="role">Umrah Pilgrim</div></div></div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <blockquote>"BZI has supplied us with reliable workers for 3 years. Their screening is top-notch."</blockquote>
-        <div class="author"><div class="avatar">AK</div><div><div class="name">Ahmed Khan</div><div class="role">Construction Manager</div></div></div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <blockquote>"Booked a last-minute flight to Dubai through BZI and got the best rate. Super responsive."</blockquote>
-        <div class="author"><div class="avatar">SR</div><div><div class="name">Sana Riaz</div><div class="role">Business Traveler</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CONTACT / APPLY ===== -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="section-title">
-      <p class="sub">Get In Touch</p>
-      <h2>Contact Us</h2>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h3>We're Here to Help</h3>
-        <p>Whether you're planning a journey, seeking employment, or need visa support — our team is ready to assist you 24/7.</p>
-        <div class="detail"><i class="fas fa-map-marker-alt"></i><div><div class="label">Office Address</div><div class="value">Shop #35, Near Rahim Chowk, Gulshan Market Road, Multan Cantt, Pakistan</div></div></div>
-        <div class="detail"><i class="fas fa-phone-alt"></i><div><div class="label">Phone</div><div class="value">+92 300 9634530 &bull; +92 300 6300269</div></div></div>
-        <div class="detail"><i class="fas fa-envelope"></i><div><div class="label">Email</div><div class="value">bz786@hotmail.com &bull; bzioep@gmail.com</div></div></div>
-        <div class="detail"><i class="fas fa-id-card"></i><div><div class="label">License</div><div class="value">OEP #3165/MTN (Govt. of Pakistan) &bull; NTN: 3626442</div></div></div>
-      </div>
-      <div class="contact-form" id="apply">
-        <h4><i class="fas fa-paper-plane" style="color:var(--gold);margin-right:8px;"></i> Apply Now</h4>
-        <p style="color:var(--gray-600);font-size:0.9rem;margin-bottom:20px;">Fill in your details and our team will get back to you within 24 hours.</p>
-        <form id="applicationForm">
-          <div class="form-row">
-            <div class="form-group"><label for="appName">Full Name</label><input type="text" id="appName" placeholder="Your full name" required /></div>
-            <div class="form-group"><label for="appPhone">Contact Number</label><input type="tel" id="appPhone" placeholder="03XX-XXXXXXX" required /></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label for="appEmail">Email Address</label><input type="email" id="appEmail" placeholder="you@example.com" /></div>
-            <div class="form-group"><label for="appService">Service Interested In</label>
-              <select id="appService">
-                <option value="flight">Flight Booking</option>
-                <option value="umrah">Umrah / Hajj</option>
-                <option value="visa">Visa Services</option>
-                <option value="recruitment">Manpower Recruitment</option>
-                <option value="hotel">Hotel Booking</option>
-                <option value="other">Other</option>
-              </select>
+    <!-- ===== TOP BAR ===== -->
+    <div class="top-bar">
+        <div class="container">
+            <div>
+                <span><i class="fas fa-phone-alt" style="color:var(--gold);margin-right:6px;"></i> +92 300 9634530</span>
+                <span style="margin-left:20px;"><i class="fas fa-envelope" style="color:var(--gold);margin-right:6px;"></i> bz786@hotmail.com</span>
+                <span style="margin-left:20px;"><i class="fas fa-badge-check" style="color:var(--gold);margin-right:6px;"></i> OEP #3165/MTN</span>
             </div>
-          </div>
-          <div class="form-group"><label for="appMessage">Message / Details</label><textarea id="appMessage" placeholder="Tell us about your travel plans..."></textarea></div>
-          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;"><i class="fas fa-paper-plane"></i> Submit Application</button>
-          <div id="formStatus" style="margin-top:14px;font-weight:600;text-align:center;font-size:0.9rem;"></div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo-text">Bahauddin Zakariya <span>International</span></div>
-        <p>Premium travel &amp; recruitment agency with over 13 years of experience.</p>
-        <div class="footer-socials">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://wa.me/923009634530" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/923009634530" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
         </div>
-      </div>
-      <div><h5>Quick Links</h5><ul><li><a href="#home">Home</a></li><li><a href="#services">Services</a></li><li><a href="#flights">Flights</a></li><li><a href="#umrah">Umrah</a></li><li><a href="#contact">Contact</a></li></ul></div>
-      <div><h5>Services</h5><ul><li><a href="#flights">Flight Booking</a></li><li><a href="#umrah">Umrah Packages</a></li><li><a href="#services">Visa Services</a></li><li><a href="#services">Manpower Recruitment</a></li></ul></div>
-      <div><h5>Contact Info</h5><ul><li><i class="fas fa-phone" style="color:var(--gold);width:20px;"></i> +92 300 9634530</li><li><i class="fas fa-envelope" style="color:var(--gold);width:20px;"></i> bz786@hotmail.com</li><li><i class="fas fa-map-marker-alt" style="color:var(--gold);width:20px;"></i> Multan, Pakistan</li><li><i class="fas fa-id-card" style="color:var(--gold);width:20px;"></i> OEP #3165/MTN</li></ul></div>
     </div>
-    <div class="footer-bottom">&copy; 2026 Bahauddin Zakariya International. All rights reserved. | OEP License #3165/MTN</div>
-  </div>
-</footer>
 
-<!-- ===== WHATSAPP FLOAT ===== -->
-<a href="https://wa.me/923009634530" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a1a3a'/%3E%3Ctext x='50' y='68' font-family='Playfair Display' font-size='44' font-weight='900' fill='%23c9a84c' text-anchor='middle'%3EBZI%3C/text%3E%3C/svg%3E" alt="BZI Logo" />
+                <div class="logo-text">
+                    Bahauddin Zakariya
+                    <span>International · Travel &amp; Recruitment</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#flights">Flights</a></li>
+                <li><a href="#umrah">Umrah</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#apply" class="btn btn-primary" style="padding:10px 28px;font-size:0.8rem;">Apply Now</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
 
-<script src="script.js"></script>
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#flights">Flights</a>
+        <a href="#umrah">Umrah</a>
+        <a href="#contact">Contact</a>
+        <a href="#apply" class="btn btn-primary">Apply Now</a>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="hero-bg-glow"></div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                <span class="hero-tagline"><i class="fas fa-award"></i> Govt. Approved OEP License #3165</span>
+                <h1>
+                    Your Journey Begins
+                    <span class="highlight">With BZI Travel</span>
+                </h1>
+                <p>Premium travel &amp; recruitment services — flights, Umrah packages, visa assistance, and overseas employment. Trusted since 2012.</p>
+                <div class="hero-badges">
+                    <span class="badge"><i class="fas fa-check-circle"></i> 13+ Years Trusted</span>
+                    <span class="badge"><i class="fas fa-users"></i> 5,000+ Deployed</span>
+                    <span class="badge"><i class="fas fa-shield-alt"></i> Govt. Licensed</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#flights" class="btn btn-primary"><i class="fas fa-plane"></i> Book a Flight</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fas fa-headset"></i> Talk to Expert</a>
+                </div>
+            </div>
+            <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000">
+                <div class="hero-card">
+                    <p class="card-title"><i class="fas fa-search" style="margin-right:6px;"></i> Quick Flight Search</p>
+                    <h3>Find Your Perfect Trip</h3>
+                    <form class="search-form" id="flightSearchForm">
+                        <div class="form-row">
+                            <input type="text" placeholder="From (e.g. Multan)" id="fromCity" />
+                            <input type="text" placeholder="To (e.g. Jeddah)" id="toCity" />
+                        </div>
+                        <div class="form-row">
+                            <input type="date" id="departDate" />
+                            <input type="date" id="returnDate" />
+                        </div>
+                        <select id="flightClass">
+                            <option value="economy">Economy Class</option>
+                            <option value="business">Business Class</option>
+                            <option value="first">First Class</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-plane-departure"></i> Search Flights</button>
+                    </form>
+                    <p style="color:rgba(255,255,255,0.3);font-size:0.7rem;margin-top:14px;text-align:center;">
+                        <i class="fas fa-lock" style="margin-right:4px;"></i> Secure &bull; Best Prices &bull; 24/7 Support
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS COUNTER ===== -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="zoom-in">
+                    <div class="stat-number" data-count="13">0</div>
+                    <div class="stat-label">Years Experience</div>
+                    <span class="stat-suffix">+</span>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-number" data-count="5000">0</div>
+                    <div class="stat-label">Workers Deployed</div>
+                    <span class="stat-suffix">+</span>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-number" data-count="99">0</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                    <span class="stat-suffix">%</span>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-label">Legally Compliant</div>
+                    <span class="stat-suffix">%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <p class="sub">What We Offer</p>
+                <h2>Premium Travel &amp; Recruitment Services</h2>
+                <p>From booking flights to deploying manpower, we handle everything with professionalism and care.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="flip-up" data-aos-delay="0">
+                    <div class="icon"><i class="fas fa-plane"></i></div>
+                    <h4>Flight Booking</h4>
+                    <p>Domestic &amp; international flights at the best rates with major airlines including Emirates, FlyDubai, and Saudia.</p>
+                </div>
+                <div class="service-card" data-aos="flip-up" data-aos-delay="100">
+                    <div class="icon"><i class="fas fa-mosque"></i></div>
+                    <h4>Umrah &amp; Hajj</h4>
+                    <p>Complete Umrah and Hajj packages with visa, accommodation, transport, and guided spiritual support.</p>
+                </div>
+                <div class="service-card" data-aos="flip-up" data-aos-delay="200">
+                    <div class="icon"><i class="fas fa-passport"></i></div>
+                    <h4>Visa Services</h4>
+                    <p>Tourist, business, and work visas for GCC countries, UK, Europe, and more — fast and reliable processing.</p>
+                </div>
+                <div class="service-card" data-aos="flip-up" data-aos-delay="300">
+                    <div class="icon"><i class="fas fa-briefcase"></i></div>
+                    <h4>Manpower Recruitment</h4>
+                    <p>Government-approved OEP (License #3165/MTN) supplying skilled and unskilled workers to the Gulf region.</p>
+                </div>
+                <div class="service-card" data-aos="flip-up" data-aos-delay="400">
+                    <div class="icon"><i class="fas fa-hotel"></i></div>
+                    <h4>Hotel Bookings</h4>
+                    <p>Luxury to budget hotels worldwide with exclusive corporate rates and 24/7 concierge support.</p>
+                </div>
+                <div class="service-card" data-aos="flip-up" data-aos-delay="500">
+                    <div class="icon"><i class="fas fa-headset"></i></div>
+                    <h4>24/7 Travel Support</h4>
+                    <p>Dedicated support team available around the clock for any travel emergencies or last-minute changes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <p class="sub">Why BZI</p>
+                <h2>Why Choose Us?</h2>
+                <p>We set the standard for excellence in travel and recruitment.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-item" data-aos="fade-right">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Trusted Partner</h4>
+                    <p>13+ years of experience with 5000+ successful deployments.</p>
+                </div>
+                <div class="why-item" data-aos="fade-up">
+                    <i class="fas fa-gem"></i>
+                    <h4>Premium Service</h4>
+                    <p>Luxury travel arrangements with personalized attention to detail.</p>
+                </div>
+                <div class="why-item" data-aos="fade-left">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>100% Legal</h4>
+                    <p>Government approved OEP with full compliance and transparency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DESTINATIONS ===== -->
+    <section class="destinations" id="destinations">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <p class="sub">Where We Fly</p>
+                <h2>Popular Destinations</h2>
+                <p>Connecting Pakistan to the world with seamless travel and recruitment services.</p>
+            </div>
+            <div class="destinations-grid">
+                <div class="dest-card" data-aos="zoom-in"><div class="flag">🇸🇦</div><h5>Saudi Arabia</h5><p>Riyadh · Jeddah · Dammam</p></div>
+                <div class="dest-card" data-aos="zoom-in" data-aos-delay="50"><div class="flag">🇦🇪</div><h5>UAE</h5><p>Dubai · Abu Dhabi · Sharjah</p></div>
+                <div class="dest-card" data-aos="zoom-in" data-aos-delay="100"><div class="flag">🇶🇦</div><h5>Qatar</h5><p>Doha · Al Wakrah</p></div>
+                <div class="dest-card" data-aos="zoom-in" data-aos-delay="150"><div class="flag">🇴🇲</div><h5>Oman</h5><p>Muscat · Salalah</p></div>
+                <div class="dest-card" data-aos="zoom-in" data-aos-delay="200"><div class="flag">🇧🇭</div><h5>Bahrain</h5><p>Manama · Riffa</p></div>
+                <div class="dest-card" data-aos="zoom-in" data-aos-delay="250"><div class="flag">🇰🇼</div><h5>Kuwait</h5><p>Kuwait City · Hawalli</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FLIGHTS ===== -->
+    <section class="flights" id="flights">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <p class="sub">Special Offers</p>
+                <h2>Featured Flight Deals</h2>
+                <p>Exclusive rates on popular routes. Book now and save with BZI Travel.</p>
+            </div>
+            <div class="flights-grid" id="flightsGrid">
+                <!-- injected by script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== UMRAH ===== -->
+    <section class="umrah" id="umrah">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <p class="sub">Spiritual Journey</p>
+                <h2>Umrah &amp; Hajj Packages</h2>
+                <p>Complete, affordable, and spiritually enriching packages designed with your comfort in mind.</p>
+            </div>
+            <div class="umrah-grid">
+                <div class="umrah-card" data-aos="flip-left">
+                    <div class="icon"><i class="fas fa-star-and-crescent"></i></div>
+                    <h4>Economy Umrah</h4>
+                    <p>7-day package with 3-star hotel, visa, and transport.</p>
+                    <a href="#contact" class="btn btn-primary">From $850</a>
+                </div>
+                <div class="umrah-card" data-aos="flip-up" data-aos-delay="100">
+                    <div class="icon"><i class="fas fa-moon"></i></div>
+                    <h4>Premium Umrah</h4>
+                    <p>10-day luxury package with 5-star hotels near Haram.</p>
+                    <a href="#contact" class="btn btn-primary">From $1,650</a>
+                </div>
+                <div class="umrah-card" data-aos="flip-right" data-aos-delay="200">
+                    <div class="icon"><i class="fas fa-kaaba"></i></div>
+                    <h4>Hajj Package</h4>
+                    <p>Complete Hajj services with experienced guides.</p>
+                    <a href="#contact" class="btn btn-primary">Inquire Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <p class="sub">Client Stories</p>
+                <h2>What Our Clients Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-right">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>"BZI made my Umrah experience truly blessed. Everything was perfectly arranged."</blockquote>
+                    <div class="author"><div class="avatar">MA</div><div><div class="name">Mohammad Ali</div><div class="role">Umrah Pilgrim</div></div></div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>"BZI has supplied us with reliable workers for 3 years. Their screening is top-notch."</blockquote>
+                    <div class="author"><div class="avatar">AK</div><div><div class="name">Ahmed Khan</div><div class="role">Construction Manager</div></div></div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-left">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>"Booked a last-minute flight to Dubai through BZI and got the best rate. Super responsive."</blockquote>
+                    <div class="author"><div class="avatar">SR</div><div><div class="name">Sana Riaz</div><div class="role">Business Traveler</div></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT / APPLY ===== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <p class="sub">Get In Touch</p>
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>We're Here to Help</h3>
+                    <p>Whether you're planning a journey, seeking employment, or need visa support — our team is ready to assist you 24/7.</p>
+                    <div class="detail"><i class="fas fa-map-marker-alt"></i><div><div class="label">Office Address</div><div class="value">Shop #35, Near Rahim Chowk, Gulshan Market Road, Multan Cantt, Pakistan</div></div></div>
+                    <div class="detail"><i class="fas fa-phone-alt"></i><div><div class="label">Phone</div><div class="value">+92 300 9634530 &bull; +92 300 6300269</div></div></div>
+                    <div class="detail"><i class="fas fa-envelope"></i><div><div class="label">Email</div><div class="value">bz786@hotmail.com &bull; bzioep@gmail.com</div></div></div>
+                    <div class="detail"><i class="fas fa-id-card"></i><div><div class="label">License</div><div class="value">OEP #3165/MTN (Govt. of Pakistan) &bull; NTN: 3626442</div></div></div>
+                </div>
+                <div class="contact-form" id="apply" data-aos="fade-left">
+                    <h4><i class="fas fa-paper-plane" style="color:var(--gold);margin-right:8px;"></i> Apply Now</h4>
+                    <p style="color:var(--gray-600);font-size:0.9rem;margin-bottom:20px;">Fill in your details and our team will get back to you within 24 hours.</p>
+                    <form id="applicationForm">
+                        <div class="form-row">
+                            <div class="form-group"><label for="appName">Full Name</label><input type="text" id="appName" placeholder="Your full name" required /></div>
+                            <div class="form-group"><label for="appPhone">Contact Number</label><input type="tel" id="appPhone" placeholder="03XX-XXXXXXX" required /></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><label for="appEmail">Email Address</label><input type="email" id="appEmail" placeholder="you@example.com" /></div>
+                            <div class="form-group"><label for="appService">Service Interested In</label>
+                                <select id="appService">
+                                    <option value="flight">Flight Booking</option>
+                                    <option value="umrah">Umrah / Hajj</option>
+                                    <option value="visa">Visa Services</option>
+                                    <option value="recruitment">Manpower Recruitment</option>
+                                    <option value="hotel">Hotel Booking</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group"><label for="appMessage">Message / Details</label><textarea id="appMessage" placeholder="Tell us about your travel plans..."></textarea></div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;"><i class="fas fa-paper-plane"></i> Submit Application</button>
+                        <div id="formStatus" style="margin-top:14px;font-weight:600;text-align:center;font-size:0.9rem;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">Bahauddin Zakariya <span>International</span></div>
+                    <p>Premium travel &amp; recruitment agency with over 13 years of experience.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/923009634530" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div><h5>Quick Links</h5><ul><li><a href="#home">Home</a></li><li><a href="#services">Services</a></li><li><a href="#flights">Flights</a></li><li><a href="#umrah">Umrah</a></li><li><a href="#contact">Contact</a></li></ul></div>
+                <div><h5>Services</h5><ul><li><a href="#flights">Flight Booking</a></li><li><a href="#umrah">Umrah Packages</a></li><li><a href="#services">Visa Services</a></li><li><a href="#services">Manpower Recruitment</a></li></ul></div>
+                <div><h5>Contact Info</h5><ul><li><i class="fas fa-phone" style="color:var(--gold);width:20px;"></i> +92 300 9634530</li><li><i class="fas fa-envelope" style="color:var(--gold);width:20px;"></i> bz786@hotmail.com</li><li><i class="fas fa-map-marker-alt" style="color:var(--gold);width:20px;"></i> Multan, Pakistan</li><li><i class="fas fa-id-card" style="color:var(--gold);width:20px;"></i> OEP #3165/MTN</li></ul></div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 Bahauddin Zakariya International. All rights reserved. | OEP License #3165/MTN</div>
+        </div>
+    </footer>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="https://wa.me/923009634530" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
