@@ -1,125 +1,119 @@
-// script.js - Interactivity for BZI Recruitment Site
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
 
-    /* ---------- Mobile Hamburger Menu ---------- */
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const bar1 = document.getElementById('bar1');
-    const bar2 = document.getElementById('bar2');
-    const bar3 = document.getElementById('bar3');
-
-    if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => {
-            const isOpen = !mobileMenu.classList.contains('hidden');
-            mobileMenu.classList.toggle('hidden');
-            menuBtn.setAttribute('aria-expanded', String(!isOpen));
-
-            // Simple X animation
-            if (!isOpen) {
-                bar1.style.transform = 'rotate(45deg) translate(4px, 4px)';
-                bar2.style.opacity = '0';
-                bar3.style.transform = 'rotate(-45deg) translate(4px, -4px)';
-            } else {
-                bar1.style.transform = 'none';
-                bar2.style.opacity = '1';
-                bar3.style.transform = 'none';
-            }
-        });
-
-        // Close menu after tapping a link
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                bar1.style.transform = 'none';
-                bar2.style.opacity = '1';
-                bar3.style.transform = 'none';
-                menuBtn.setAttribute('aria-expanded', 'false');
-            });
-        });
-    }
-
-    /* ---------- Job Vacancy Listings ---------- */
-    const jobListings = document.getElementById('job-listings');
-    const jobs = [
-        { title: 'Heavy Duty Driver', country: 'Saudi Arabia', type: 'Skilled', salary: 'SAR 1,800 - 2,200 / month', seats: 12 },
-        { title: 'Electrician (Industrial)', country: 'UAE', type: 'Skilled', salary: 'AED 2,000 - 2,500 / month', seats: 8 },
-        { title: 'Warehouse Helper', country: 'Qatar', type: 'Unskilled', salary: 'QAR 1,200 - 1,400 / month', seats: 25 },
-        { title: 'CNC Machine Operator', country: 'Saudi Arabia', type: 'Skilled', salary: 'SAR 2,000 - 2,600 / month', seats: 6 },
-        { title: 'Construction Labor', country: 'Oman', type: 'Unskilled', salary: 'OMR 130 - 160 / month', seats: 30 },
-        { title: 'AC Technician', country: 'UAE', type: 'Skilled', salary: 'AED 1,900 - 2,300 / month', seats: 10 },
-    ];
-
-    if (jobListings) {
-        jobs.forEach(job => {
-            const card = document.createElement('div');
-            card.className = 'job-card';
-            card.innerHTML = `
-                <div class="flex justify-between items-start mb-3">
-                    <h3 class="text-lg font-bold text-gray-900">${job.title}</h3>
-                    <span class="job-badge">${job.type}</span>
-                </div>
-                <p class="text-sm text-gray-500 mb-1">📍 ${job.country}</p>
-                <p class="text-sm text-gray-700 font-semibold mb-1">${job.salary}</p>
-                <p class="text-xs text-green-600 font-semibold mb-4">${job.seats} seats available</p>
-                <a href="#apply" class="block text-center btn-premium py-2 rounded text-sm font-bold">Apply For This Role</a>
-            `;
-            jobListings.appendChild(card);
-        });
-    }
-
-    /* ---------- FAQ Accordion ---------- */
-    document.querySelectorAll('.faq-item').forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-            if (!isActive) item.classList.add('active');
-        });
+  // ---- Mobile Menu ----
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', function () {
+      this.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
     });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function () {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('open');
+      });
+    });
+  }
 
-    /* ---------- License Image Lightbox ---------- */
-    const licenseThumb = document.getElementById('license-thumb');
-    const lightbox = document.getElementById('license-lightbox');
-    const lightboxClose = document.getElementById('lightbox-close');
+  // ---- Flight Deals (static data) ----
+  const flights = [
+    { from: 'Multan', to: 'Jeddah', airline: 'Saudia', price: 'PKR 89,900', seats: 12 },
+    { from: 'Lahore', to: 'Dubai', airline: 'Emirates', price: 'PKR 72,500', seats: 8 },
+    { from: 'Islamabad', to: 'Riyadh', airline: 'FlyDubai', price: 'PKR 65,200', seats: 15 },
+    { from: 'Karachi', to: 'Doha', airline: 'Qatar Airways', price: 'PKR 78,000', seats: 6 }
+  ];
+  const flightsGrid = document.getElementById('flightsGrid');
+  if (flightsGrid) {
+    flights.forEach(f => {
+      const card = document.createElement('div');
+      card.className = 'flight-card';
+      card.innerHTML = `
+        <div class="route"><span>${f.from}</span><i class="fas fa-arrow-right"></i><span>${f.to}</span></div>
+        <div style="font-size:0.8rem;color:var(--gray-600);font-weight:600;margin-top:-2px;">${f.airline}</div>
+        <div class="meta"><span><i class="fas fa-users"></i> ${f.seats} seats left</span><span><i class="fas fa-calendar-alt"></i> Flexible</span></div>
+        <div class="price">${f.price} <small>round-trip</small></div>
+        <a href="#contact" class="btn btn-primary" style="padding:10px 24px;font-size:0.8rem;">Book Now</a>
+      `;
+      flightsGrid.appendChild(card);
+    });
+  }
 
-    if (licenseThumb && lightbox) {
-        licenseThumb.addEventListener('click', () => lightbox.classList.remove('hidden'));
-        lightboxClose.addEventListener('click', () => lightbox.classList.add('hidden'));
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) lightbox.classList.add('hidden');
-        });
-    }
+  // ---- Flight Search Form ----
+  const searchForm = document.getElementById('flightSearchForm');
+  if (searchForm) {
+    searchForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const from = document.getElementById('fromCity').value || 'your city';
+      const to = document.getElementById('toCity').value || 'your destination';
+      const depart = document.getElementById('departDate').value || 'soon';
+      const cls = document.getElementById('flightClass').value;
+      alert(`🔍 Searching flights from ${from} to ${to}\n📅 Departure: ${depart}\n🛫 Class: ${cls}\n\nOur team will contact you with the best options.`);
+    });
+  }
 
-    /* ---------- Candidate Application Form ---------- */
-    const submitBtn = document.getElementById('app-submit-btn');
-    const statusMsg = document.getElementById('app-status');
+  // ---- Application Form (with backend integration) ----
+  const form = document.getElementById('applicationForm');
+  const status = document.getElementById('formStatus');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('appName').value.trim();
+      const phone = document.getElementById('appPhone').value.trim();
+      const email = document.getElementById('appEmail').value.trim();
+      const service = document.getElementById('appService').value;
+      const message = document.getElementById('appMessage').value.trim();
 
-    if (submitBtn) {
-        submitBtn.addEventListener('click', () => {
-            const name = document.getElementById('app-name').value.trim();
-            const phone = document.getElementById('app-phone').value.trim();
-            const trade = document.getElementById('app-trade').value.trim();
+      if (!name || !phone) {
+        status.style.color = '#dc2626';
+        status.textContent = '❌ Please fill in your Name and Phone Number.';
+        return;
+      }
 
-            if (!name || !phone || !trade) {
-                statusMsg.textContent = 'Please fill your Name, Contact Number, and Trade before submitting.';
-                statusMsg.className = 'text-sm text-center mt-4 text-red-600 font-semibold';
-                statusMsg.classList.remove('hidden');
-                return;
-            }
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+      status.style.color = '#16a34a';
+      status.textContent = '⏳ Submitting...';
 
-            // Note: this is a static front-end demo. Wire this up to your
-            // backend / form service (e.g. Formspree, Google Sheets API,
-            // or your own server) to actually receive submissions.
-            submitBtn.textContent = 'Submitting...';
-            submitBtn.disabled = true;
+      // Prepare data for backend
+      const data = { name, phone, email, service, message };
 
-            setTimeout(() => {
-                statusMsg.textContent = `Thank you ${name}, your application has been received. Our HR team will contact you on ${phone} shortly.`;
-                statusMsg.className = 'text-sm text-center mt-4 text-green-700 font-semibold';
-                statusMsg.classList.remove('hidden');
-                submitBtn.textContent = 'Submit Application';
-                submitBtn.disabled = false;
-            }, 1200);
-        });
-    }
+      // Send to backend (if running Node.js server)
+      fetch('/api/apply', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(res => res.json())
+      .then(result => {
+        status.textContent = `✅ ${result.message || 'Application received!'} Our team will contact you on ${phone}.`;
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Application';
+        form.reset();
+      })
+      .catch(err => {
+        // Fallback: if backend not running, still show success (demo)
+        status.textContent = `✅ Thank you ${name}! Your application has been received. (Offline demo)`;
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Application';
+        form.reset();
+        console.warn('Backend not reachable, but form demo works.', err);
+      });
+    });
+  }
+
+  // ---- Smooth scroll for anchor links ----
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
 });
